@@ -1,0 +1,22 @@
+@model Transaction
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Delete Transaction?</h2>
+            <hr />
+        </div>
+        <div asp-validation-summary="All"></div>
+        <div class="mb-3">
+            <input disabled asp-for="Name" class="form-control" placeholder="Name" />
+        </div>
+        <div class="mb-3">
+            <input disabled asp-for="Date" class="form-control" placeholder="Date" />
+        </div>
+        <div class="mb-3">
+            <input disabled asp-for="Amount" class="form-control" placeholder="Amount" />
+        </div>
+        <button type="submit" class="btn btn-danger" style="width:150px">Delete</button>
+        <a asp-controller="Transactions" asp-action="Index" class="btn btn-secondary" style="width:150px">Back</a>
+    </div>
+</form>

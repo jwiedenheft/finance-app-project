@@ -1,0 +1,33 @@
+@model Transaction
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Add Transaction</h2>
+            <hr />
+        </div>
+        <div asp-validation-summary="All"></div>
+        <div class="mb-3">
+            <label asp-for="Name">Name of transaction:</label>
+            <input asp-for="Name" class="form-control" placeholder="Name" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Date">Date of transaction:</label>
+            <input asp-for="Date" class="form-control" placeholder="Date" />
+            <span asp-validation-for="Date" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Amount">Transaction amount:</label>
+            <input asp-for="Amount" class="form-control" placeholder="Amount" />
+            <span asp-validation-for="Amount" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:150px">Create</button>
+        <a asp-controller="Transactions" asp-action="Index" class="btn btn-secondary" style="width:150px">Back</a>
+    </div>
+</form>
+@section Scripts{
+@{
+    <partial name="_ValidationScriptsPartial"/>
+}
+}
