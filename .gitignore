@@ -1,7 +1,0 @@
-/.vscode
-/test
-/src/obj
-/src/bin
-appsettings.json
-.gitignore
-src/FinanceApp/appsettings.Development.json
